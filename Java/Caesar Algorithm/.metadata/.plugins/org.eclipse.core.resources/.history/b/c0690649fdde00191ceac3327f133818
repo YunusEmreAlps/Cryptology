@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Main{
+	public static void main(String[] args){
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.printf("Please enter your message : ");
+		String msg = scan.nextLine();
+		msg = msg.toUpperCase(); // MESSAGE
+		
+		int key = 5;
+		
+		String A = "";
+		
+		for (int i=0 ; i<msg.length();i++){
+			
+			if (((int)msg.charAt(i)) > 85) {
+				int temp = ((int)msg.charAt(i)+key)%90;
+				temp = temp + 64;
+				A += (char)(temp);		
+			}
+			else {
+				A += (char)((int)msg.charAt(i)+key);  
+			}
+			
+		}
+		System.out.println(A);
+		
+	}
+}
