@@ -17,28 +17,14 @@ while True: # coprime control
 
 if ((modi > numi)and (cont == True)):
     lpc = int(modi/numi) # loop counter
-    nc,mdc = 1,0
-    a = 1
+    nc = 1
     
     while True: # infinity loop
-        if(((modi*mdc)-(numi*nc)) == 1): # status positive
-            break
-        if(nc > lpc): 
-            mdc += 1
-            lpc += int(modi/numi)
-        nc += 1
-
-    if(modi - nc) < 0 :
-        while True:
-            res = modi*a - nc
-            if res > 0:
+            if(((numi*nc)%modi) == 1): # status positive
                 break
-            else:
-                a +=1
-        
-    else:
-        res = modi - nc
-    print("Result :",res)
+            nc += 1
+    print(nc)
+       
 else:
     if cont == False:
         print("There is no modular multiplicative inverse for this integer")
