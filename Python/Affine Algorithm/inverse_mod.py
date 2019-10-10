@@ -1,8 +1,12 @@
 # inverse mod
 
-numi = int(input("Please enter your number : ")) 
-modi = int(input("Please enter your divisor : ")) 
+# ----------
+# input part
+numi = int(input(" - Please enter your number : ")) 
+modi = int(input(" - Please enter your divisor : ")) 
 
+# ----------
+# control part
 i=2
 cont = False
 
@@ -14,20 +18,21 @@ while True: # coprime control
         cont = True
         break
     i+=1
+    
+if(numi > modi):
+    numi = numi%modi
 
-if ((modi > numi)and (cont == True)):
+# ---------- 
+if cont == True:
     lpc = int(modi/numi) # loop counter
     nc = 1
-    
     while True: # infinity loop
             if(((numi*nc)%modi) == 1): # status positive
                 break
             nc += 1
-    print(nc)
+    print(" - inverse mod :",nc)
        
 else:
     if cont == False:
         print("There is no modular multiplicative inverse for this integer")
     
-    elif (numi > modi):    
-        print(f"Error: {numi} > {modi} ")
