@@ -30,9 +30,6 @@ while True: # infinity loop
         break
     i+=1
 
-print(cont)
-print(cont2)
-
 if((cont==True)and(cont2==True)):        
     frmt = modi-1
     result = (numi**(basi%frmt))%modi
