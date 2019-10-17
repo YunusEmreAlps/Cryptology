@@ -18,38 +18,33 @@ def prime():
     i = 2
     prime_p = False
 
-    
-
-    while True: # prime number control
-        if(p%i == 0):
-            prime_p = False
-            break
-    
-        if((p-1) == i and p!=2):
-            prime_p = True
-            break
-    
-        i+=1
+    if p>10: 
+        while True: # prime number control
+            if(p%i == 0):
+                prime_p = False
+                break
         
-    if(p==2):
-        prime_p = True
+            if((p-1) == i and p!=2):
+                prime_p = True
+                break
+        
+            i+=1
+        
 # ----------
     i = 2
     prime_q = False
-
-    while True: # prime number control
-        if(q%i == 0):
-            prime_q = False
-            break
-    
-        if((q-1) == i):
-            prime_q = True
-            break
-    
-        i+=1 
+    if q>10:
+        while True: # prime number control
+            if(q%i == 0):
+                prime_q = False
+                break
         
-    if(q==2):
-        prime_q = True
+            if((q-1) == i):
+                prime_q = True
+                break
+        
+            i+=1 
+        
         
 # encode
 def encode():
@@ -57,7 +52,6 @@ def encode():
     global prime_p
     global prime_e
     prime()
-    
     
     if(prime_q == True and prime_p == True):
         p = int(theEntry1.get())
