@@ -56,7 +56,6 @@ if prime_p==True and prime_q==True:
             break
         i+=1
         
-        
     # ascii number
     msg = input(" - Message : ")
     e_msg = ""
@@ -64,19 +63,19 @@ if prime_p==True and prime_q==True:
         number = 0
         number = ord(i)
         c = (number**e)%n
-        print(c)
         e_msg+=chr(c)
         
     # Encrypt
     print(f" - Encrypt : {e_msg}")
     d_msg=""
-    # Decrypt
+    
     for i in e_msg:
         number=0
         number=ord(i)
         m = (number**d)%n
         d_msg+=chr(m)
-        
+    
+    # Decrypt    
     print(f" - Decrypt : {d_msg}")
     
     

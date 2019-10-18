@@ -119,10 +119,8 @@ def decode():
         
         d=i # private key
         d_msg=""
-    
         # ascii number
         e_msg = ""
-    
         for i in msg:
             number = 0
             number = ord(i)
